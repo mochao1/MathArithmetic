@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.demo.amt.demoapp.TestActivity">
+
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:text="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="2"
+        app:layout_constraintLeft_toRightOf="@id/btn1"
+        app:layout_goneMarginLeft="20dp" />
+
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="3"
+        app:layout_constraintTop_toBottomOf="@id/btn1" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:text="4"
+        app:layout_constraintBaseline_toBaselineOf="@id/btn3"
+        app:layout_constraintLeft_toRightOf="@id/btn3" />
+
+    <!--角度定位-->
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="5"
+        app:layout_constraintTop_toBottomOf="@id/btn4" />
+
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="6"
+        app:layout_constraintCircle="@+id/btn5"
+        app:layout_constraintCircleAngle="90"
+        app:layout_constraintCircleRadius="100dp" />
+
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn8"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn7" />
+
+    <!--Barrier可以在多个控件的一侧建立一个屏障-->
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="right"
+        app:constraint_referenced_ids="btn2,btn4" />
+
+    <Button
+        android:id="@+id/btn9"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="@color/colorPrimary"
+        android:text="9"
+        app:layout_constraintDimensionRatio="h,1:2"
+        app:layout_constraintLeft_toRightOf="@+id/barrier" />
+
+    <Button
+        android:id="@+id/btn10"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="10"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn11"
+        app:layout_constraintTop_toBottomOf="@id/btn8" />
+
+    <Button
+        android:id="@+id/btn11"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="11"
+        app:layout_constraintLeft_toRightOf="@id/btn10"
+        app:layout_constraintRight_toLeftOf="@id/btn12"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn8" />
+
+    <Button
+        android:id="@+id/btn12"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="12"
+        app:layout_constraintLeft_toRightOf="@id/btn11"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn8" />
+
+
+    <Button
+        android:id="@+id/btn13"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="13"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn14"
+        app:layout_constraintTop_toBottomOf="@id/btn10" />
+
+    <Button
+        android:id="@+id/btn14"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="14"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintLeft_toRightOf="@id/btn13"
+        app:layout_constraintRight_toLeftOf="@id/btn15"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn10" />
+
+    <Button
+        android:id="@+id/btn15"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:text="15"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintLeft_toRightOf="@id/btn14"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn10" />
+
+    <!--Group可以把多个控件归为一组，方便隐藏或显示一组控件-->
+    <android.support.constraint.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="btn13,btn14" />
+
+<!--像辅助线一样，在预览的时候帮助你完成布局（不会显示在界面上-->
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="155dp" />
+
+
+</android.support.constraint.ConstraintLayout>
