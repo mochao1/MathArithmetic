@@ -7,8 +7,13 @@
     android:gravity="center"
     android:orientation="vertical"
     tools:context="com.demo.amt.demoapp.MainActivity">
+<TextView
+    android:id="@+id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
 
    <Button
+       android:textAllCaps="false"
        android:id="@+id/detail"
        android:text="跳转详情"
        android:layout_width="match_parent"
