@@ -2,15 +2,13 @@ package com.demo.amt.demoapp;
 
 import android.content.Intent;
 import android.os.Build;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 
 public class Main5Activity extends AppCompatActivity implements View.OnClickListener {
     Button btn1, btn2, btn4, btn3, btn5, btn6, btn7, btn8, btn9, btn10, btn11, btn12;

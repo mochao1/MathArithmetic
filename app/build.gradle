@@ -5,7 +5,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.demo.demoapp"
+        applicationId "com.demo.amt.demoapp"
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1
@@ -23,6 +23,18 @@ android {
             dirs 'libs'
         }
     }
+
+//    sourceSets {
+//        main {
+//            manifest.srcFile 'src/main/AndroidManifest.xml'
+//            java.srcDirs = ['src/main/java', 'src/main/aidl']
+//            resources.srcDirs = ['src/main/java', 'src/main/aidl']
+//            aidl.srcDirs = ['src/main/aidl']
+//            res.srcDirs = ['src/main/res']
+//            assets.srcDirs = ['src/main/assets']
+//        }
+//    }
+
 }
 
 dependencies {
@@ -33,8 +45,11 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     //    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation 'com.github.mochao1:MathArithmetic:1.0'
+    implementation 'com.github.mochao1:MathArithmetic:1.1'
     //    implementation files('libs/mc.jar')
     implementation files('libs/commons-codec-1.14.jar')
+    implementation files('libs/BaseAdapter_1.0.jar')
+    implementation files('libs/gson-2.1.jar')
     compile 'com.koushikdutta.async:androidasync:2.+'
+    compile 'com.plattysoft.leonids:LeonidsLib:1.3.2'
 }

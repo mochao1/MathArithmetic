@@ -37,7 +37,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.setClassName("com.amt.gamestore.plugin", "com.amt.gamestore.InitActivity");
+//                intent.setClassName("com.amt.gamestore.plugin", "com.amt.gamestore.InitActivity");
+                intent.setClassName("com.demo.mc.demox", "com.demo.mc.demox.MainActivity");
+//               intent.setClassName("com.demo.amt.demoapp", "com.demo.amt.demoapp.Main2Activity");
+
 //                intent.setAction("com.android.smart.terminal.iptv");
                 String url = "";
                 switch (v.getId()) {
@@ -54,13 +57,13 @@ public class MainActivity extends AppCompatActivity {
                     default:
                         break;
                 }
-//                try {
-//                    intent.putExtra("intentMsg", url);
-//                    startActivity(intent);
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-                getAppProcessName();
+                try {
+                    intent.putExtra("intentMsg", url);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+//                getAppProcessName();
             }
         };
 

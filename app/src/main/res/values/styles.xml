@@ -1,12 +1,6 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
 
     <style name="MyTransparent" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@color/colorTransparent_15</item> <!-- 背景色透明度 -->
@@ -14,17 +8,6 @@
         <item name="android:windowIsTranslucent">true</item><!-- 半透明,设置为false无透明效果 -->
         <item name="android:backgroundDimEnabled">true</item><!-- 模糊 -->
         <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item> <!-- 窗口样式Dialog -->
-    </style>
-
-    <style name="hostTheme" parent="@android:style/Theme.Translucent">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="TranThemeBg" parent="android:Theme.Translucent">
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowContentOverlay">@null</item>
     </style>
 
 </resources>
